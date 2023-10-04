@@ -1,0 +1,34 @@
+create database day1;
+use day1;
+
+create table employee(empid int,name varchar(10));
+insert into employee values (456,'XYZ'),(789,'ABC');
+select employee;
+insert into student values (1,'Saiem','70'),(2,'Xyz',80);
+desc student;
+
+create table shirts (name varchar(30),size enum('xsmall','small','medium','large'));
+insert into books values(101,'ABC','Denis Ritchie',450,'System');
+insert into shirts values('corcs','large');
+insert into shirts values('JP','medium');
+
+insert into books values(102,'Oracle','Loni',550,'Database');
+select * from books;
+
+		Assignment
+
+2]	select * from books where cost>=500 and cost<=700;
+3]	SELECT * FROM books WHERE book_name LIKE 'O%';
+4]	select * from books where cost < (select avg(cost)from books);
+5]	create table books1 as (select * from books);**********
+6]	create table copyofbooks as(select * from books);
+7]	create table db as (select * from books where Category = 'Database');
+8]	select * from books where cost = (select max(cost) from books);
+9]	select * from books where cost = (select min(cost) from books);
+10]	update books set cost=cost+150 where Book_name = 'ABC';
+11]	select book_name,cost from books where Category = 'Database' or Category = 'System';
+12]	select book_name, cost from books1;
+13]	select * from books where cost < 500;
+14]	alter table books add Published_year int(10);
+15]	update books set published_year =2000 where author_name ='Loni';
+16]	

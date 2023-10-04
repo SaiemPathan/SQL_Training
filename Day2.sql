@@ -1,0 +1,10 @@
+use day1;
+select * from books where cost > 500 order by book_no desc ;
+select * from cars_dataset;
+select count(*),maker from cars_dataset group by maker;
+select * from cars_dataset where seats=8;
+select count(*),fuel from cars_dataset group by fuel;
+select count(*),type from cars_dataset group by type having count(*) > 10;
+select distinct fuel from cars_dataset;
+select distinct Engine Type from cars_dataset;
+select * ,(displacement) from cars_dataset order by displacement desc;
